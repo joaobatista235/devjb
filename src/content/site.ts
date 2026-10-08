@@ -1,10 +1,9 @@
 import type { SiteContent } from "@/types/content";
 
-// Destino único de todos os botões "Falar sobre meu projeto". Substitua pelo seu contato real.
-const CONTACT_URL = "https://wa.me/5500000000000";
+const CONTACT_URL = "https://wa.me/+5515998394854";
 
 export const site = {
-  brand: "DEVJ Batista",
+  brand: "Dev JB",
   nav: [
     { label: "Serviços", href: "#servicos" },
     { label: "Processo", href: "#processo" },
@@ -166,7 +165,7 @@ export const site = {
   },
 
   footer: {
-    copyright: "© 2026 DEVJ Batista. Todos os direitos reservados.",
+    copyright: "© 2026 Dev JB. Todos os direitos reservados.",
     signature: "Desenvolvimento web para pequenos negócios.",
   },
 } satisfies SiteContent;
