@@ -123,7 +123,7 @@ export const site = {
 
   investment: {
     eyebrow: "Seu próximo passo",
-    title: "Sites a partir de R$ 597",
+    title: "Sites a partir de R$ 397",
     description: "Vamos entender o que seu negócio precisa e definir o escopo do seu projeto.",
   },
 
