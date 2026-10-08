@@ -1,0 +1,8 @@
+@use "mixins" as *;
+
+.layout {
+  display: grid;
+  gap: 3rem;
+
+  @include up(lg) { grid-template-columns: minmax(0, 352fr) minmax(0, 672fr); gap: 6rem; }
+}

@@ -1,0 +1,7 @@
+.container {
+  inline-size: min(calc(100% - 2 * var(--gutter)), var(--container-max));
+  margin-inline: auto;
+}
+
+.content { --container-max: var(--content-max); }
+.wide { --container-max: var(--wide-max); }

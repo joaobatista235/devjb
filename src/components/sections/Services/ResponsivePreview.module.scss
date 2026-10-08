@@ -1,0 +1,54 @@
+@use "mixins" as *;
+
+.preview {
+  position: absolute;
+  inset-block-end: 1.6875rem;
+  inset-inline-end: 1.6875rem;
+  inline-size: 9rem;
+  block-size: 6.25rem;
+  display: none;
+
+  @include up(sm) { display: block; }
+}
+
+.desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  inline-size: 7.75rem;
+  block-size: 5.625rem;
+  padding: 0.625rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: #202633;
+}
+
+.dots {
+  display: flex;
+  gap: 4px;
+  i { inline-size: 3px; block-size: 3px; border-radius: 2px; background: var(--color-subtle); }
+}
+
+.heading { inline-size: 68%; block-size: 6px; border-radius: 2px; background: var(--color-label); }
+.line { inline-size: 90%; block-size: 4px; border-radius: 2px; background: var(--color-border); }
+.lineShort { inline-size: 60%; block-size: 4px; border-radius: 2px; background: var(--color-border); }
+
+.mobile {
+  position: absolute;
+  inset-inline-start: 6.25rem;
+  inset-block-start: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  inline-size: 2.25rem;
+  block-size: 4.375rem;
+  padding: 6px;
+  border: 1px solid var(--color-subtle);
+  border-radius: 7px;
+  background: var(--color-card);
+
+  .heading { inline-size: 100%; block-size: 3px; border-radius: 0; }
+  .line { inline-size: 100%; block-size: 3px; border-radius: 0; }
+}
+
+.image { block-size: 24px; border-radius: 2px; background: #223a69; }

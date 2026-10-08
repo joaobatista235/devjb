@@ -1,0 +1,40 @@
+@use "mixins" as *;
+
+.item { border-block-start: 1px solid var(--color-border); }
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  inline-size: 100%;
+  padding-block: 1.5rem;
+  text-align: start;
+}
+
+.question {
+  color: var(--color-text);
+  font-size: 1.125rem;
+  font-weight: 500;
+  @include motion-safe { transition: color 0.3s var(--ease-out); }
+}
+
+.active { color: var(--color-label); }
+
+// Abre e fecha animando a altura real do conteúdo (0fr → 1fr), sem medir nada em JS.
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  @include motion-safe { transition: grid-template-rows 0.45s var(--ease-out); }
+
+  &[data-open="true"] { grid-template-rows: 1fr; }
+}
+
+.clip { overflow: hidden; }
+
+.answer {
+  padding-block-end: 1.5rem;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}

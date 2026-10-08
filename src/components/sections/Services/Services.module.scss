@@ -1,0 +1,12 @@
+@use "mixins" as *;
+
+.intro { max-inline-size: 45rem; }
+.groups { display: grid; gap: 1rem; }
+
+.primary, .reach { display: grid; gap: 1rem; }
+
+.primary {
+  @include up(lg) { grid-template-columns: 2fr 1fr 1fr; }
+}
+
+.reach { grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }

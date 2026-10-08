@@ -1,0 +1,17 @@
+@use "mixins" as *;
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(1.5rem); }
+}
+
+// Animação (e não transição) para não competir com os hovers do próprio elemento.
+.reveal {
+  @include motion-safe {
+    &[data-visible="false"] { opacity: 0; }
+
+    &[data-visible="true"] {
+      animation: rise var(--duration-base) var(--ease-out) backwards;
+      animation-delay: calc(var(--order, 0) * var(--stagger));
+    }
+  }
+}

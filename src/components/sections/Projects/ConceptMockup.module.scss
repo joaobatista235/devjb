@@ -1,0 +1,97 @@
+@use "mixins" as *;
+
+.stage {
+  padding: 2.5rem 2.25rem 2.25rem;
+  border-radius: var(--radius-card);
+  background: var(--stage);
+}
+
+.window {
+  container-type: inline-size;
+  aspect-ratio: 476 / 278;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--window);
+  box-shadow: 0 20px 32px rgba(7, 11, 18, 0.33);
+
+  @include motion-safe { transition: transform 0.5s var(--ease-out); }
+}
+
+.stage:hover .window { @include motion-safe { transform: translateY(-4px); } }
+
+// 1u = 1px do frame original (476px de largura).
+.screen {
+  --u: calc(100cqw / 476);
+  display: flex;
+  flex-direction: column;
+  block-size: 100%;
+  color: #6f747f;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: calc(5 * var(--u));
+  block-size: calc(25 * var(--u));
+  padding-inline: calc(12 * var(--u));
+  background: var(--chrome);
+  font-size: calc(8 * var(--u));
+}
+
+.dots {
+  display: flex;
+  gap: calc(5 * var(--u));
+  i { inline-size: calc(4 * var(--u)); block-size: calc(4 * var(--u)); border-radius: 50%; background: rgba(0, 0, 0, 0.22); }
+}
+
+.barLabel { flex: 1; text-align: center; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  block-size: calc(44 * var(--u));
+  padding-inline: calc(24 * var(--u));
+}
+
+.category { color: #333b4a; font-size: calc(10 * var(--u)); font-weight: 600; }
+.menu { display: flex; gap: calc(12 * var(--u)); font-size: calc(7 * var(--u)); }
+
+.body {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: calc(12 * var(--u));
+  padding: 0 calc(16 * var(--u)) calc(16 * var(--u)) calc(24 * var(--u));
+}
+
+.presentation { display: flex; flex: 1; flex-direction: column; align-items: flex-start; gap: calc(12 * var(--u)); }
+.headline { color: #303644; font-size: calc(26 * var(--u)); font-weight: 500; line-height: 1.1; }
+.description { font-size: calc(8 * var(--u)); line-height: 1.5; }
+
+.cta {
+  padding: calc(7 * var(--u)) calc(12 * var(--u));
+  border-radius: calc(20 * var(--u));
+  background: var(--accent);
+  color: #fff;
+  font-size: calc(8 * var(--u));
+  font-weight: 500;
+}
+
+.panel {
+  display: grid;
+  flex: none;
+  place-items: center;
+  inline-size: calc(194 * var(--u));
+  aspect-ratio: 194 / 174;
+  border-radius: calc(8 * var(--u));
+  background: var(--panel);
+}
+
+.shape {
+  inline-size: var(--shape-width);
+  block-size: var(--shape-height);
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--shape-from) 0%, var(--shape-mid) 48%, var(--shape-to) 100%);
+  box-shadow: 0 calc(12 * var(--u)) calc(20 * var(--u)) rgba(70, 55, 90, 0.28);
+}

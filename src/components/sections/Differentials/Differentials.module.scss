@@ -1,0 +1,20 @@
+@use "mixins" as *;
+
+.layout {
+  display: grid;
+  gap: 3rem;
+
+  @include up(lg) { grid-template-columns: minmax(0, 456fr) minmax(0, 584fr); gap: 5rem; }
+}
+
+.item {
+  display: flex;
+  gap: 1.5rem;
+  padding-block: 1.375rem;
+  border-block-start: 1px solid var(--color-border);
+}
+
+.icon { display: inline-flex; color: var(--color-label); }
+.info { display: flex; flex-direction: column; gap: 0.5rem; }
+.title { color: var(--color-text); font-size: 1.25rem; font-weight: 500; }
+.description { color: var(--color-muted); font-size: 0.9375rem; line-height: 1.5; }

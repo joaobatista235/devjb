@@ -1,0 +1,19 @@
+.intro { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+.center { align-items: center; text-align: center; }
+
+.eyebrow { color: var(--color-label); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+.title { color: var(--color-text); font-weight: 500; text-wrap: balance; }
+.description { color: var(--color-muted); font-size: 1.125rem; line-height: 1.6; text-wrap: pretty; }
+
+.md .title { font-size: var(--text-md); line-height: 1.15; }
+.md .description { font-size: 1rem; }
+
+.lg .title { font-size: var(--text-lg); line-height: 1.13; }
+
+.xl { gap: 1.75rem; }
+.xl .title { max-inline-size: 53.75rem; font-size: var(--text-xl); line-height: 1.1; }
+.xl .description { max-inline-size: 38.75rem; }
+
+.display { gap: 1.75rem; }
+.display .title { max-inline-size: 67.5rem; font-size: var(--text-display); line-height: 1.06; }
+.display .description { max-inline-size: 41.25rem; font-size: 1.25rem; }
