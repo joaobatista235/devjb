@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import logo from "@/assets/logo.png";
 import "@/styles/globals.scss";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   title: "Dev JB — Sites para pequenos negócios",
   description:
     "Sites claros, bonitos e fáceis de usar para pequenos negócios. Uma presença online à altura do que você faz todos os dias.",
+  icons: { icon: logo.src },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
