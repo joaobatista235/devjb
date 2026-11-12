@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* Dev Batista · "letreiro de bairro, feito com código"
+   60 papel creme · 30 tinta · 10 laranja de placa "ABERTO". Verde só no WhatsApp. */
+@theme {
+  --color-papel: #f3eee4;
+  --color-papel-2: #e9e2d4;
+  --color-cartao: #fbf8f2;
+  --color-tinta: #15140f;
+  --color-tinta-2: #4f4a40;
+  --color-tinta-3: #7a7468;
+  --color-linha: #d9d1c1;
+  --color-sinal: #ff5b1f;
+  --color-sinal-escuro: #e04a12;
+  --color-wa: #1f8a4c;
+  --color-noite: #1b1a15;
+  --font-display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
+  --animate-cursor: cursor 1.1s steps(1) infinite;
+  --animate-letreiro: letreiro 40s linear infinite;
+  @keyframes cursor {
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes letreiro {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+  body {
+    @apply bg-papel font-sans text-[17px] leading-relaxed text-tinta antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-sinal);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-sinal);
+    color: white;
+  }
+}
+
+@layer components {
+  .caixa {
+    width: min(1160px, 100% - 40px);
+    margin-inline: auto;
+  }
+  .display {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 96;
+    letter-spacing: -0.035em;
+  }
+  .etiqueta {
+    @apply inline-flex items-center gap-2 font-mono text-[12.5px] font-medium tracking-[0.04em] text-tinta-2 uppercase;
+  }
+  .etiqueta::before {
+    content: "//";
+    color: var(--color-sinal);
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-transparent px-6 py-3.5 text-[16px] font-bold transition active:scale-[.98];
+  }
+  .btn-tinta {
+    @apply bg-tinta text-papel hover:bg-sinal;
+  }
+  .btn-wa {
+    @apply bg-wa text-white hover:brightness-110;
+  }
+  .btn-linha {
+    @apply border-tinta text-tinta hover:bg-tinta hover:text-papel;
+  }
+
+  @keyframes entra {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .entrada {
+    animation: entra 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .entrada:nth-child(2) {
+    animation-delay: 0.08s;
+  }
+  .entrada:nth-child(3) {
+    animation-delay: 0.16s;
+  }
+  .entrada:nth-child(4) {
+    animation-delay: 0.24s;
+  }
+  .entrada:nth-child(5) {
+    animation-delay: 0.32s;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .js .reveal.on {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .entrada,
+    .animate-cursor,
+    .animate-letreiro {
+      animation: none;
+    }
+    .js .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}

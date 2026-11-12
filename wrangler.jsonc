@@ -1,0 +1,11 @@
+// Cloudflare Workers com arquivos estáticos (sem servidor, sem bindings).
+// "name" precisa ser igual ao nome do projeto na Cloudflare: devjb.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "devjb",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
