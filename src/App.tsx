@@ -10,7 +10,7 @@ import { useState, type ReactNode } from "react";
 import { Faq, IconeWhatsApp, WhatsApp } from "./lib/componentes";
 import { statusAberto } from "./lib/horario";
 import { useAgora, useReveal } from "./lib/hooks";
-import { conceitos, ctaFinal, demo, diferenciais, dor, faq, hero, investimento, marca, nav, processo, recursos, regiao } from "./dados";
+import { conceitos, ctaFinal, demo, diferenciais, dor, faq, hero, investimento, marca, nav, outros, processo, recursos, regiao } from "./dados";
 import { Monograma, Wordmark } from "./marca";
 
 const FUSO = "America/Sao_Paulo";
@@ -24,6 +24,9 @@ function Icone({ nome }: { nome: string }) {
     google: <g {...p}><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></g>,
     mapa: <g {...p}><path d="M12 20.5s-6.5-5.6-6.5-10.3a6.5 6.5 0 0 1 13 0c0 4.7-6.5 10.3-6.5 10.3Z" /><circle cx="12" cy="10" r="2.3" /></g>,
     raio: <path {...p} d="M13 3 5 13.5h6L10 21l8-10.5h-6L13 3Z" />,
+    app: <g {...p}><rect x="7" y="2.5" width="10" height="19" rx="2.5" /><path d="M11 18.5h2" /></g>,
+    sistema: <g {...p}><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4M7 9h5M7 12h8" /></g>,
+    consultoria: <g {...p}><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H8l-4 3Z" /><path d="M8.5 8h7M8.5 11h4.5" /></g>,
   };
   return <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true">{d[nome]}</svg>;
 }
@@ -277,6 +280,25 @@ export default function App() {
               <p>{investimento.aparte}</p>
               <p>{investimento.pagamento}</p>
             </div>
+          </div>
+        </section>
+
+        {/* TAMBÉM DESENVOLVO */}
+        <section className="border-t border-linha py-24">
+          <div className="caixa">
+            <Cab kicker={outros.kicker} titulo={outros.titulo} texto={outros.texto} />
+            <div className="grid gap-4 md:grid-cols-3">
+              {outros.itens.map((o) => (
+                <div key={o.titulo} className="reveal flex flex-col rounded-2xl border border-linha bg-cartao p-7">
+                  <span className="grid size-11 place-items-center rounded-xl bg-sinal text-white"><Icone nome={o.icone} /></span>
+                  <h3 className="display mt-5 text-[22px] font-bold">{o.titulo}</h3>
+                  <p className="mt-2 flex-1 text-[15.5px] text-tinta-2">{o.texto}</p>
+                </div>
+              ))}
+            </div>
+            <WhatsApp {...wa("outros", outros.msg)} className="btn btn-linha reveal mt-8">
+              <IconeWhatsApp className="size-4.5" /> Conversar sobre app ou sistema
+            </WhatsApp>
           </div>
         </section>
 

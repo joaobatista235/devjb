@@ -14,7 +14,7 @@ export const marca = {
 export const seo = {
   titulo: "Criação de sites em Ourinhos e região · Dev Batista",
   descricao:
-    "Criação de sites para negócios de Ourinhos e região: WhatsApp com mensagem pronta, horário atualizado e Google. Prévia grátis. A partir de R$ 790.",
+    "Sites, aplicativos e sistemas para empresas de Ourinhos e região. Sites com WhatsApp, horário atualizado e Google, com prévia grátis. A partir de R$ 790.",
   imagem: "/og.jpg",
 };
 
@@ -81,6 +81,18 @@ export const processo = {
   ],
 };
 
+export const outros = {
+  kicker: "Também desenvolvo",
+  titulo: "Seu negócio precisa de mais que um site?",
+  texto: "Além de sites, desenvolvo soluções sob medida para empresas que querem organizar o dia a dia ou atender melhor. Orçamento sob consulta, combinado pelo WhatsApp.",
+  itens: [
+    { icone: "app", titulo: "Aplicativos", texto: "Apps para Android e iPhone: pedidos, agendamentos, área do cliente e fidelidade." },
+    { icone: "sistema", titulo: "Sistemas web", texto: "Sistemas sob medida para cadastros, agenda, pedidos, estoque e controle interno, acessados pelo navegador." },
+    { icone: "consultoria", titulo: "Consultoria web", texto: "Diagnóstico da sua presença no Google, no Instagram e no WhatsApp, com um plano de melhorias claro." },
+  ],
+  msg: "Olá, João! Vim pelo site da Dev Batista e quero conversar sobre um aplicativo/sistema para o meu negócio.",
+};
+
 export const conceitos = {
   kicker: "Estilos",
   titulo: "Cada negócio com a sua cara.",
@@ -130,7 +142,7 @@ export const investimento = {
 export const regiao = {
   kicker: "Onde eu atendo",
   titulo: "Sites para negócios de Ourinhos e região.",
-  texto: "Atendo comércios e prestadores de serviço de Ourinhos e das cidades vizinhas, e também de qualquer lugar do Brasil, com tudo combinado pelo WhatsApp.",
+  texto: "Atendo empresas de Ourinhos, Avaré, Itapeva, Itapetininga e cidades vizinhas, e também de qualquer lugar do Brasil, com tudo combinado pelo WhatsApp.",
   cidades: [
     { nome: "Ourinhos", uf: "SP" },
     { nome: "Santa Cruz do Rio Pardo", uf: "SP" },
@@ -140,6 +152,10 @@ export const regiao = {
     { nome: "Canitar", uf: "SP" },
     { nome: "Bernardino de Campos", uf: "SP" },
     { nome: "Assis", uf: "SP" },
+    { nome: "Avaré", uf: "SP" },
+    { nome: "Cerqueira César", uf: "SP" },
+    { nome: "Itapeva", uf: "SP" },
+    { nome: "Itapetininga", uf: "SP" },
     { nome: "Jacarezinho", uf: "PR" },
     { nome: "Cambará", uf: "PR" },
   ],
@@ -147,6 +163,7 @@ export const regiao = {
 
 export const faq = [
   { p: "Você faz sites para empresas de Ourinhos?", r: "Sim. A Dev Batista cria sites para comércios e prestadores de serviço de Ourinhos e região, como Santa Cruz do Rio Pardo, Salto Grande, Chavantes, Jacarezinho e Cambará. Você recebe uma prévia grátis do seu site pelo WhatsApp antes de decidir." },
+  { p: "Você também desenvolve aplicativos e sistemas?", r: "Sim. Além de sites, a Dev Batista desenvolve aplicativos para Android e iPhone, sistemas web sob medida e faz consultoria web. Como cada projeto é diferente, o orçamento é feito depois de uma conversa pelo WhatsApp." },
   { p: "Quanto custa um site para pequeno negócio?", r: "Os sites da Dev Batista começam em R$ 790 (Essencial) e R$ 1.290 (Completo), com preço fechado. Depois de pronto, o único custo fixo é o domínio .com.br, R$ 40 por ano, pago direto ao Registro.br." },
   { p: "Preciso pagar mensalidade?", r: "Não. A hospedagem é gratuita na Cloudflare. A manutenção mensal (R$ 89) é opcional, para quem quer que eu atualize produtos, preços e horários." },
   { p: "Em quanto tempo o site fica pronto?", r: "Em até 5 dias úteis depois de receber fotos e informações. Como a prévia já sai antes do fechamento, boa parte do trabalho está adiantada." },

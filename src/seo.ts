@@ -23,7 +23,7 @@ export function head(siteUrl?: string) {
       knowsLanguage: "pt-BR",
       sameAs: [marca.instagram].filter(Boolean),
       priceRange: "R$ 790 – R$ 1.290",
-      knowsAbout: ["Criação de sites", "Landing pages", "SEO local", "Sites para pequenos negócios"],
+      knowsAbout: ["Criação de sites", "Landing pages", "SEO local", "Desenvolvimento de aplicativos", "Desenvolvimento de software", "Sistemas web", "Consultoria web"],
     },
     {
       "@context": "https://schema.org",
