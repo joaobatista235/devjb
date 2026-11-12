@@ -10,7 +10,7 @@ import { useState, type ReactNode } from "react";
 import { Faq, IconeWhatsApp, WhatsApp } from "./lib/componentes";
 import { statusAberto } from "./lib/horario";
 import { useAgora, useReveal } from "./lib/hooks";
-import { conceitos, ctaFinal, demo, diferenciais, dor, faq, hero, investimento, marca, nav, processo, recursos } from "./dados";
+import { conceitos, ctaFinal, demo, diferenciais, dor, faq, hero, investimento, marca, nav, processo, recursos, regiao } from "./dados";
 import { Monograma, Wordmark } from "./marca";
 
 const FUSO = "America/Sao_Paulo";
@@ -277,6 +277,20 @@ export default function App() {
               <p>{investimento.aparte}</p>
               <p>{investimento.pagamento}</p>
             </div>
+          </div>
+        </section>
+
+        {/* REGIÃO (SEO local) */}
+        <section id="regiao" className="border-t border-linha py-24">
+          <div className="caixa grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
+            <Cab kicker={regiao.kicker} titulo={regiao.titulo} texto={regiao.texto} />
+            <ul className="reveal mb-11 flex flex-wrap gap-2.5" aria-label="Cidades atendidas">
+              {regiao.cidades.map((c, i) => (
+                <li key={c.nome} className={`rounded-full border px-4 py-2 text-[15px] font-semibold ${i === 0 ? "border-tinta bg-tinta text-papel" : "border-linha bg-cartao"}`}>
+                  {c.nome} <span className={i === 0 ? "text-papel/60" : "text-tinta-3"}>· {c.uf}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

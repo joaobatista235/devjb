@@ -12,9 +12,9 @@ export const marca = {
 };
 
 export const seo = {
-  titulo: "Dev Batista · Criação de sites para pequenos negócios",
+  titulo: "Criação de sites em Ourinhos e região · Dev Batista",
   descricao:
-    "Sites rápidos para pequenos negócios: WhatsApp com mensagem pronta, horário atualizado, Google e mapa. Prévia grátis antes de fechar. A partir de R$ 790.",
+    "Criação de sites para negócios de Ourinhos e região: WhatsApp com mensagem pronta, horário atualizado e Google. Prévia grátis. A partir de R$ 790.",
   imagem: "/og.jpg",
 };
 
@@ -26,7 +26,7 @@ export const nav = [
 ];
 
 export const hero = {
-  kicker: "Criação de sites para pequenos negócios",
+  kicker: "Criação de sites em Ourinhos e região",
   titulo: ["Sites que fazem o cliente", "chamar no WhatsApp."],
   texto:
     "Uma página rápida, com a cara do seu negócio, que mostra o que você vende, quando está aberto e onde fica. E leva o cliente direto para a sua conversa.",
@@ -126,7 +126,27 @@ export const investimento = {
   pagamento: "50% para começar e 50% na entrega, ou em até 3x no cartão.",
 };
 
+/** Área de atendimento (vai para a página e para o schema.org). */
+export const regiao = {
+  kicker: "Onde eu atendo",
+  titulo: "Sites para negócios de Ourinhos e região.",
+  texto: "Atendo comércios e prestadores de serviço de Ourinhos e das cidades vizinhas, e também de qualquer lugar do Brasil, com tudo combinado pelo WhatsApp.",
+  cidades: [
+    { nome: "Ourinhos", uf: "SP" },
+    { nome: "Santa Cruz do Rio Pardo", uf: "SP" },
+    { nome: "Salto Grande", uf: "SP" },
+    { nome: "Chavantes", uf: "SP" },
+    { nome: "Ipaussu", uf: "SP" },
+    { nome: "Canitar", uf: "SP" },
+    { nome: "Bernardino de Campos", uf: "SP" },
+    { nome: "Assis", uf: "SP" },
+    { nome: "Jacarezinho", uf: "PR" },
+    { nome: "Cambará", uf: "PR" },
+  ],
+};
+
 export const faq = [
+  { p: "Você faz sites para empresas de Ourinhos?", r: "Sim. A Dev Batista cria sites para comércios e prestadores de serviço de Ourinhos e região, como Santa Cruz do Rio Pardo, Salto Grande, Chavantes, Jacarezinho e Cambará. Você recebe uma prévia grátis do seu site pelo WhatsApp antes de decidir." },
   { p: "Quanto custa um site para pequeno negócio?", r: "Os sites da Dev Batista começam em R$ 790 (Essencial) e R$ 1.290 (Completo), com preço fechado. Depois de pronto, o único custo fixo é o domínio .com.br, R$ 40 por ano, pago direto ao Registro.br." },
   { p: "Preciso pagar mensalidade?", r: "Não. A hospedagem é gratuita na Cloudflare. A manutenção mensal (R$ 89) é opcional, para quem quer que eu atualize produtos, preços e horários." },
   { p: "Em quanto tempo o site fica pronto?", r: "Em até 5 dias úteis depois de receber fotos e informações. Como a prévia já sai antes do fechamento, boa parte do trabalho está adiantada." },

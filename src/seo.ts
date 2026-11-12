@@ -1,4 +1,4 @@
-import { faq, marca, seo } from "./dados";
+import { faq, marca, regiao, seo } from "./dados";
 
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 
@@ -16,7 +16,12 @@ export function head(siteUrl?: string) {
       description: seo.descricao,
       telephone: `+${marca.whatsapp}`,
       founder: { "@type": "Person", name: marca.responsavel },
-      areaServed: { "@type": "Country", name: "Brasil" },
+      areaServed: [
+        ...regiao.cidades.map((c) => ({ "@type": "City", name: `${c.nome} - ${c.uf}` })),
+        { "@type": "Country", name: "Brasil" },
+      ],
+      knowsLanguage: "pt-BR",
+      sameAs: [marca.instagram].filter(Boolean),
       priceRange: "R$ 790 – R$ 1.290",
       knowsAbout: ["Criação de sites", "Landing pages", "SEO local", "Sites para pequenos negócios"],
     },
@@ -42,6 +47,8 @@ export function head(siteUrl?: string) {
     `<meta property="og:image:width" content="1200">`,
     `<meta property="og:image:height" content="630">`,
     `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="geo.region" content="BR-SP">`,
+    `<meta name="geo.placename" content="Ourinhos">`,
     ...schema.map((s) => `<script type="application/ld+json">${JSON.stringify(s).replace(/</g, "\\u003c")}</script>`),
   ].join("\n    ");
 }
